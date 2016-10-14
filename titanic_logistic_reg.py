@@ -67,14 +67,7 @@ print("cross validation =\n",cval.cross_val_score(model,X_train,y_train,cv=10,sc
 print("adaboost mean cross validation = ",crossval_score_adaboost.mean())   #mean cross validation score
 
 
-
-
-
-
-
-
-
-########## TO LOAD THE TEST DATA AND PREDICT THE OUTPUT
+########## TO LOAD THE TEST DATA AND PREDICT THE OUTPUT ########
 
 df2=pd.read_csv("test.csv")     #test data
 
@@ -93,25 +86,15 @@ for i in range(0,418):
             df2.ix[i,'Title']='Miss.'
 
 passangerID=df2['PassengerId'].values      #store passangerid to use in creating csv submission.
+df2=df2.drop(axis=1,labels=['PassengerId','Name','Ticket','Cabin'])     #dropping useless features from the test data
 
-
-
-df2=df2.drop(axis=1,labels=['PassengerId','Name','Ticket','Cabin']) #dropping useless features from the test data
-
-#filling in values
+#filling in missing values
 df2['Age']=df2['Age'].fillna(df2['Age'].median())
 df2['Fare']=df2['Fare'].fillna(df2['Fare'].median())
 
-df2=pd.get_dummies(df2,columns=['Sex','Embarked','Title']) #converting to dummy variables.
-
-#df2['Family']=df['SibSp']+df['Parch']+1       #creating new feature called family
-#
+df2=pd.get_dummies(df2,columns=['Sex','Embarked','Title'])      #converting to dummy variables.
 
 features2=df2.ix[0:,0:].values      #storing input and output variables
-#print(features2)
-
-
-
 
 prediction=model.predict(features2)  #making prediction for test data
 
