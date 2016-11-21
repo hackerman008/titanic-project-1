@@ -5,9 +5,9 @@ This is the code for the titanic Survival prediction problem.In this project I b
 
 
 ##Libraries 
-*Panda's
-*Scikit-Learn
-*os
+* Panda's
+* Scikit-Learn
+* os
 
 The libraries can be installed using pip through the terminal.
 
