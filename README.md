@@ -1,7 +1,7 @@
 # kaggle/titanic dataset
 
 ##Overview
-This is the code for the titanic Survival prediction problem.In this project I build a Random forest machine learning algorithm  to classify passangers of titanic into surive or not surive.
+This is the code for the titanic Survival prediction problem.In this project we use a Random forest machine learning algorithm  to classify passangers of titanic into surive or not surive.
 
 
 ##Libraries 
