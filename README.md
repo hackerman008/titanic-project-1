@@ -1,22 +1,22 @@
 # kaggle/titanic dataset
 
-##Overview
+## Overview
 This is the code for the titanic Survival prediction problem.In this project we use a Random forest machine learning algorithm  to classify passangers of titanic into surive or not surive.
 
 
-##Libraries 
+## Libraries 
 * Panda's
 * Scikit-Learn
 * os
 
 The libraries can be installed using pip through the terminal.
 
-##Usage
+## Usage
 Run the File like this in the terminal.
 
 ```
 python titanic2.py
 ```
 
-##DataSet
+## DataSet
 The dataset is provided here https://www.kaggle.com/c/titanic/data
